@@ -2,11 +2,11 @@ window.onload = function() {
         var canvas = document.getElementById('can');
         var context = canvas.getContext('2d');
         var a = [];
-	var nb = document.forms[0].elements["nb"];
-	var taille = document.forms[0].elements["taille"];
         setInterval(anime, 1000);
        
         function anime() {
+		var nb = document.forms[0].elements["nb"];
+		var taille = document.forms[0].elements["taille"];
             context.fillStyle = "green";
             context.clearRect(0, 0, canvas.width, canvas.height);
             for (i=0; i<nb; i++) {
