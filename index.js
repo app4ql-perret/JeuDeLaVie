@@ -5,8 +5,8 @@ window.onload = function() {
         setInterval(anime, 1000);
        
         function anime() {
-		var nb = document.forms[0].elements["nb"];
-		var taille = document.forms[0].elements["taille"];
+		var nb = document.forms[0].elements["nb"].value;
+		var taille = document.forms[0].elements["taille"].value;
             context.fillStyle = "green";
             context.clearRect(0, 0, canvas.width, canvas.height);
             for (i=0; i<nb; i++) {
