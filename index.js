@@ -13,10 +13,10 @@ window.onload = function() {
                 for (j=0; j<nb; j++) {
                     if (Math.random() > 0.9) {
                         a[i*nb+j] = 1;
-                        context.fillStyle = "green";
+                        context.fillStyle = document.forms[1].elements["cel"].value;
                     } else {
                         a[i*nb+j] = 0;
-                        context.fillStyle = "red";
+                        context.fillStyle = document.forms[1].elements["cas"].value;
                     }
                     context.fillRect(taille*i, taille*j, taille, taille);
                 }
