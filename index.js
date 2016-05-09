@@ -2,7 +2,20 @@ window.onload = function() {
         var canvas = document.getElementById('can');
         var context = canvas.getContext('2d');
         var a = [];
-        setInterval(anime, 1000);
+	var time = 1000;
+        var inter = setInterval(anime, time);
+	setInterval(edittime, 10);
+
+
+
+	function edittime(){
+		var timeChange = document.forms[0].elements["time"].value;
+		if (time != timeChange) {
+			clearInterval(inter);
+			time = timeChange
+			inter = setInterval(anime, time);
+		}
+	}
        
         function anime() {
 		var nb = document.forms[0].elements["nb"].value;
